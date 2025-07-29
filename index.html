@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>.NET to Java Converter</title>
+    <meta name="description" content="Convert .NET applications to Java with AI-powered code transformation. Submit your GitHub repository and get a new Java repository with identical functionality.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fab fa-microsoft"></i>
+                <span>.NET2Java</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+                <li><a href="#faq" class="nav-link">FAQ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Convert .NET Apps to Java</h1>
+                <p class="hero-subtitle">Seamlessly transform your .NET applications into Java with identical functionality. Just submit your GitHub repository URL and let our AI-powered converter do the magic.</p>
+                
+                <div class="conversion-form">
+                    <div class="input-group">
+                        <i class="fab fa-github"></i>
+                        <input type="url" id="github-url" placeholder="https://github.com/username/dotnet-repo" required>
+                        <button type="submit" id="convert-btn">
+                            <i class="fas fa-exchange-alt"></i>
+                            Convert to Java
+                        </button>
+                    </div>
+                    <div class="form-note">
+                        <i class="fas fa-info-circle"></i>
+                        Enter your .NET application's GitHub repository URL
+                    </div>
+                </div>
+
+                <div class="conversion-progress" id="conversion-progress" style="display: none;">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                    <div class="progress-text" id="progress-text">Initializing conversion...</div>
+                </div>
+
+                <div class="conversion-result" id="conversion-result" style="display: none;">
+                    <div class="result-success">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>Conversion Complete!</h3>
+                        <p>Your .NET application has been successfully converted to Java.</p>
+                        <div class="result-details">
+                            <div class="detail-item">
+                                <span class="label">Files Converted:</span>
+                                <span class="value" id="files-count">0</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="label">Lines of Code:</span>
+                                <span class="value" id="lines-count">0</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="label">New Repository:</span>
+                                <a href="#" id="new-repo-link" target="_blank" class="repo-link">
+                                    <i class="fab fa-github"></i>
+                                    View Java Repository
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>AI-Powered Conversion</h3>
+                    <p>Advanced AI algorithms analyze your .NET codebase and generate equivalent Java code</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <h3>GitHub Integration</h3>
+                    <p>Direct integration with GitHub for seamless repository cloning and new repo creation</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Functionality Preservation</h3>
+                    <p>Maintains exact functionality while converting from .NET to Java ecosystem</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-vial"></i>
+                    </div>
+                    <h3>Automated Testing</h3>
+                    <p>Generated Java code includes comprehensive tests to ensure correctness</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <h2>How It Works</h2>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Submit Repository</h3>
+                    <p>Enter your .NET application's GitHub repository URL</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Analysis</h3>
+                    <p>Our AI analyzes the codebase structure and dependencies</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Conversion</h3>
+                    <p>Automatic conversion from .NET to Java with equivalent functionality</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <h3>New Repository</h3>
+                    <p>Receive a new GitHub repository with your converted Java application</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>What .NET frameworks are supported?</h3>
+                    <p>We support .NET Core, .NET Framework, and .NET 5/6/7 applications including ASP.NET, Entity Framework, and standard libraries.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How long does conversion take?</h3>
+                    <p>Conversion time depends on repository size. Small projects (under 1000 lines) take 2-5 minutes, while larger projects may take 15-30 minutes.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Will my application logic remain the same?</h3>
+                    <p>Yes, our AI ensures that all business logic, algorithms, and functionality are preserved during the conversion process.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What Java frameworks are used?</h3>
+                    <p>We use Spring Boot for web applications, Hibernate for ORM, and Maven/Gradle for build management, following Java best practices.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 .NET2Java Converter. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms of Service</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
